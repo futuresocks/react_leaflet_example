@@ -13,7 +13,6 @@ class MapContainer extends React.Component{
   }
 
   componentDidMount(){
-    console.log('hey');
     fetch('https://restcountries.eu/rest/v2/all')
     .then(response => response.json())
     .then(countries => this.setState({countries}))
