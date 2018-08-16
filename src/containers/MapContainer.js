@@ -1,6 +1,7 @@
 import React from 'react'
-import MapBox from '../components/MapBox.js'
-import CountrySelector from '../components/CountrySelector.js'
+import MapBox from '../components/MapBox'
+import Header from '../components/Header'
+import CountrySelector from '../components/CountrySelector'
 
 class MapContainer extends React.Component{
   constructor(props){
@@ -28,7 +29,7 @@ class MapContainer extends React.Component{
   render(){
     return(
       <React.Fragment>
-        <h1>React Leaflet</h1>
+        <Header title="React Leaflet"/>
         <CountrySelector countries = {this.state.countries} onCountrySelect={this.handleCountrySelected}/>
         <MapBox country = {this.state.selectedCountry}/>
       </React.Fragment>
