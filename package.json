@@ -1,5 +1,5 @@
 {
-  "name": "react_leaflet",
+  "name": "globobucket",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,5 +15,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/futuresocks/react_leaflet_example.git"
+  },
+  "author": "futuresocks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/futuresocks/react_leaflet_example/issues"
+  },
+  "homepage": "https://github.com/futuresocks/react_leaflet_example#readme"
 }
