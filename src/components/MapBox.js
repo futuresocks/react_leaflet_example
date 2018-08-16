@@ -27,7 +27,7 @@ class MapBox extends React.Component{
     if(!this.props.country) return null
 
     return(
-      <Map center={this.props.country.latlng} zoom={1} onClick={this.addMarker}>
+      <Map center={this.props.country.latlng} zoom={4} onClick={this.addMarker}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
         <MarkerView markers={this.state.markers} handleMarkerClick={this.removeMarker}/>
       </Map>
