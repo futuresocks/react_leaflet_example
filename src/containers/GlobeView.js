@@ -3,7 +3,7 @@ import MapBox from '../components/MapBox'
 import Header from '../components/Header'
 import CountrySelector from '../components/CountrySelector'
 
-class MapContainer extends React.Component{
+class GlobeView extends React.Component{
   constructor(props){
     super(props)
     this.state = {
@@ -37,4 +37,4 @@ class MapContainer extends React.Component{
   }
 }
 
-export default MapContainer
+export default GlobeView

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import MapContainer from './containers/MapContainer.js'
+import GloboBucket from './containers/GloboBucket'
 
 class App extends Component {
   render() {
     return (
-        <MapContainer/>
+        <GloboBucket/>
     );
   }
 }
