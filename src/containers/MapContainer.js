@@ -27,11 +27,11 @@ class MapContainer extends React.Component{
 
   render(){
     return(
-      <div>
+      <React.Fragment>
         <h1>React Leaflet</h1>
         <CountrySelector countries = {this.state.countries} onCountrySelect={this.handleCountrySelected}/>
         <MapBox country = {this.state.selectedCountry}/>
-      </div>
+      </React.Fragment>
     )
   }
 }
