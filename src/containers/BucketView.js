@@ -9,6 +9,12 @@ class BucketView extends Component{
     }
   }
 
+  componentDidMount(){
+    fetch("http://localhost:3001/bucketlist")
+    .then(response => response.json())
+    .then(bucketCountries => this.setState({bucketCountries}))
+  }
+
   render(){
     return null
   }
