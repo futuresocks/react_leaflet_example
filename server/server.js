@@ -40,6 +40,18 @@ MongoClient.connect('mongodb://localhost:27017', function(err, client){
     })
   })
 
+  app.delete('/bucketlist', (req, res) => {
+    db.dropDatabase(function (err){
+      if(err){
+        console.log(err);
+        res.status(500);
+        res.send()
+      }
+      res.status(204)
+      res.send();
+    });
+  })
+
   app.listen(3001, () => {
     console.log(`App listening`);
   })
