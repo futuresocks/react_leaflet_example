@@ -28,6 +28,8 @@ class GlobeView extends React.Component{
 
   addCountry(event){
     event.preventDefault()
+    if(!this.state.selectedCountry) return;
+
     fetch('http://localhost:3001/bucketlist', {
       method: "POST",
       headers: {
