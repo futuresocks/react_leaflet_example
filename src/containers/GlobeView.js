@@ -11,6 +11,7 @@ class GlobeView extends React.Component{
       selectedCountry: null
     }
     this.handleCountrySelected = this.handleCountrySelected.bind(this)
+    this.addCountry = this.addCountry.bind(this)
   }
 
   componentDidMount(){
@@ -25,6 +26,17 @@ class GlobeView extends React.Component{
     this.setState({selectedCountry});
   }
 
+  addCountry(event){
+    event.preventDefault()
+    fetch('http://localhost:3001/bucketlist', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+        },
+      body: JSON.stringify(this.state.selectedCountry)})
+    .catch(err => console.log(err))
+  }
+
 
   render(){
     return(
@@ -32,6 +44,7 @@ class GlobeView extends React.Component{
         <Header title="React Leaflet"/>
         <CountrySelector countries = {this.state.countries} onCountrySelect={this.handleCountrySelected}/>
         <MapBox country = {this.state.selectedCountry}/>
+        <button onClick = {this.addCountry} value = "Add a country"/>
       </React.Fragment>
     )
   }

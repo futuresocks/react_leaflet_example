@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MapBox from '../components/MapBox.js'
+import Header from '../components/Header.js'
 
 class BucketView extends Component{
   constructor(props){
@@ -16,7 +17,11 @@ class BucketView extends Component{
   }
 
   render(){
-    return null
+    return(
+      <React.Fragment>
+        <Header title = "Bucket List"/>
+      </React.Fragment>
+    )
   }
 
 }
